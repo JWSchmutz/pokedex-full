@@ -13,7 +13,9 @@ app.use(function (req, res, next) {
 });
 
 require("./config");
-
+console.log(
+  "AAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+);
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: false, limit: "50mb" }));
 
