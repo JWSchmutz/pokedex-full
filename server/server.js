@@ -17,12 +17,12 @@ require("./config");
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: false, limit: "50mb" }));
 
-app.use("/", express.static(path.join(__dirname, "../client/b4uild")));
+app.use("/", express.static(path.join(__dirname, "../client/build")));
 
 app.use("/", require("./routes"));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../client/bui2ld", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
