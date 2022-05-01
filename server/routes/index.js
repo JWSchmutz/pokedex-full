@@ -5,6 +5,7 @@ const pokemonRoutes = require("./pokemon");
 router.use("/pokemon", pokemonRoutes);
 // For anything else, render the html page
 router.use(function (req, res) {
+  console.log(path.join(__dirname, "../../client/build/index.html"));
   res.sendFile(path.join(__dirname, "../../client/build/index.html"));
 });
 
